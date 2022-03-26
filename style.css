@@ -89,6 +89,7 @@ h1 {
 h1:hover {
     color: white;
     transition: 0.3s ease;
+    cursor: context-menu;
 }
 
 html {
@@ -142,6 +143,11 @@ footer::before {
 footer {
     position: relative;
     font-size: 2rem;
+    color: #ffe6fd;
+}
+
+footer a {
+    text-decoration: none;
     color: #ffe6fd;
 }
 
