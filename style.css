@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffebe6;
+}
+
+.img-gallery {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+.img-gallery img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.img-gallery img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 15px;
+    box-shadow: 5px 7px 9px black;
+    transition: all 0.5s ease;
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img {
+    width: 90%;
+    max-width: 500px;
+}
+
+.full-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* h1 */
+
+h1::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: rgb(253, 93, 120);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+h1 {
+    position: relative;
+    font-size: 5rem;
+}
+
+h1:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+#ani {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (orientation: landscape) {
+    body {
+        grid-auto-flow: column;
+    }
+}
+
+
+/* footer */
+
+footer::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+footer:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+footer::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: rgb(253, 93, 120);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+footer {
+    position: relative;
+    font-size: 2rem;
+    color: #ffe6fd;
+}
+
+footer:hover {
+    color: white;
+    transition: 0.3s ease;
+}
+
+#ani-F {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
