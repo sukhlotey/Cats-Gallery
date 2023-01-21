@@ -89,7 +89,7 @@ h1 {
 h1:hover {
     color: white;
     transition: 0.3s ease;
-    cursor: context-menu;
+    cursor:default;
 }
 
 html {
@@ -135,7 +135,7 @@ footer::before {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: rgb(253, 93, 120);
+    background: #fd5d78;
     z-index: -1;
     transition: transform .3s ease;
 }
@@ -165,3 +165,18 @@ footer:hover {
     place-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+    border: 1px solid #d5d5d5;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius:0;
+    background: #fd5d78;
+  }
